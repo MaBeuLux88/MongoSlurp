@@ -1,0 +1,20 @@
+DEFAULT
+[('_id', 'ObjectId', "doc['_id']"),
+ ('city', 'String', "doc['city']"),
+ ('zip', 'Integer', "doc['zip']"),
+ ('loc.x', 'Double', "doc['loc.x']"),
+ ('loc.y', 'Double', "doc['loc.y']"),
+ ('pop', 'Integer', "doc['pop']"),
+ ('state', 'String', "doc['state']")]
+
+
+BETTER
+[('_id', 'ObjectId', "doc['_id']"),
+ ('city', 'String', "doc['city']"),
+ ('zip', 'String', "doc['zip']"),
+ ('loc.coordinate', 'Array', "[doc['loc.x'],doc['loc.y']]"),
+ ('loc.type', 'String', 'Point'),
+ ('pop', 'Integer', "doc['pop']"),
+ ('state', 'String', "doc['state']")]
+
+[('_id', 'ObjectId', "doc['_id']"), ('city', 'String', "doc['city']"), ('zip', 'String', "doc['zip']"), ('loc.coordinate', 'Array', "[doc['loc.x'],doc['loc.y']]"), ('loc.type', 'String', 'Point'), ('pop', 'Integer', "doc['pop']"), ('state', 'String', "doc['state']")]

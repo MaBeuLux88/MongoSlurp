@@ -1,0 +1,39 @@
+DEFAULT
+[('_id', 'ObjectId', "doc['_id']"),
+ ('firstname', 'String', "doc['firstname']"),
+ ('lastname', 'String', "doc['lastname']"),
+ ('age', 'Integer', "doc['age']"),
+ ('size', 'Double', "doc['size']"),
+ ('alive', 'Boolean', "doc['alive']"),
+ ('timestamp', 'Integer', "doc['timestamp']"),
+ ('date_of_birth', 'Date', "doc['date_of_birth']"),
+ ('licence_date', 'Date', "doc['licence_date']"),
+ ('certificate_date', 'Date', "doc['certificate_date']"),
+ ('year_inserted', 'Integer', "doc['year_inserted']"),
+ ('month_inserted', 'Integer', "doc['month_inserted']"),
+ ('day_inserted', 'Integer', "doc['day_inserted']"),
+ ('address_number', 'Integer', "doc['address_number']"),
+ ('street_name', 'String', "doc['street_name']"),
+ ('postcode', 'Integer', "doc['postcode']"),
+ ('city', 'String', "doc['city']"),
+ ('country', 'String', "doc['country']")]
+
+
+BETTER
+[('_id', 'ObjectId', "doc['_id']"),
+ ('name', 'String', "doc['firstname'] + ' ' + doc['lastname']"),
+ ('age', 'Integer', "doc['age']"),
+ ('size', 'Double', "doc['size']"),
+ ('alive', 'Boolean', "doc['alive']"),
+ ('timestamp', 'Date', "doc['timestamp']"),
+ ('date_of_birth', 'Date', "doc['date_of_birth']"),
+ ('licence_date', 'Date', "doc['licence_date']"),
+ ('certificate_date', 'Date', "doc['certificate_date']"),
+ ('inserted_at', 'Date', "doc['year_inserted']+'/'+doc['month_inserted']+'/'+doc['day_inserted']"),
+ ('address.number', 'Integer', "doc['address_number']"),
+ ('address.street_name', 'String', "doc['street_name']"),
+ ('address.postcode', 'String', "doc['postcode']"),
+ ('address.city', 'String', "doc['city']"),
+ ('address.country', 'String', "doc['country']")]
+
+ [('_id', 'ObjectId', "doc['_id']"), ('name', 'String', "doc['firstname'] + ' ' + doc['lastname']"), ('age', 'Integer', "doc['age']"), ('size', 'Double', "doc['size']"), ('alive', 'Boolean', "doc['alive']"), ('timestamp', 'Date', "doc['timestamp']"), ('date_of_birth', 'Date', "doc['date_of_birth']"), ('licence_date', 'Date', "doc['licence_date']"), ('certificate_date', 'Date', "doc['certificate_date']"), ('inserted_at', 'Date', "doc['year_inserted']+'/'+doc['month_inserted']+'/'+doc['day_inserted']"), ('address.number', 'Integer', "doc['address_number']"), ('address.street_name', 'String', "doc['street_name']"), ('address.postcode', 'String', "doc['postcode']"), ('address.city', 'String', "doc['city']"), ('address.country', 'String', "doc['country']")]
